@@ -1,106 +1,58 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#fff8ed" />
-    <meta name="description" content="Small-batch cakes, pastries and little everyday treats from Sweet Crumbs, your friendly neighborhood bakery." />
-    <meta property="og:title" content="Sweet Crumbs Bakery — a little joy, freshly baked" />
-    <meta property="og:description" content="Small-batch cakes, pastries and little everyday treats from our neighborhood oven." />
-    <title>Sweet Crumbs Bakery | A little joy, freshly baked</title>
-    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="./styles.css" />
-    <script src="./script.js" defer></script>
-  </head>
-  <body>
-    <div class="announcement">Fresh from the oven, every morning · Made with love in our little kitchen</div>
-    <header class="site-header">
-      <div class="nav-wrap">
-        <a class="brand" href="#home" aria-label="Sweet Crumbs home">
-          <span class="brand-mark" aria-hidden="true">s</span>
-          <span class="brand-name">Sweet Crumbs<small>Bakery &amp; little joys</small></span>
-        </a>
-        <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
-        <nav class="nav-links" id="nav-links" aria-label="Main navigation">
-          <a href="#home">Home</a><a href="#treats">Our treats</a><a href="#about">Our story</a><a href="#contact">Visit us</a>
-        </nav>
-        <button class="cart-button" id="open-cart" aria-label="Open shopping bag, 0 items">
-          <span aria-hidden="true">Bag</span><span class="cart-count" id="cart-count">0</span>
-        </button>
-      </div>
-    </header>
-    <main>
-      <section class="hero" id="home">
-        <div class="hero-panel">
-          <div class="hero-copy">
-            <div class="eyebrow">Good things are baking</div>
-            <h1>A little joy,<br />freshly <em>baked.</em></h1>
-            <p>Butter-soft, berry-bright, and made by hand. Find your new favorite treat, baked fresh in our neighborhood kitchen.</p>
-            <div class="hero-actions"><a class="button" href="#treats">See what's baking <span aria-hidden="true">↗</span></a><a class="text-link" href="#about">Our little story</a></div>
-          </div>
-          <div class="hero-art">
-            <img src="./images/hero-bakes.jpg" alt="Freshly baked strawberry cake and pastries on the bakery counter" />
-            <div class="round-note"><strong>Since</strong><span>the first<br />batch, 2018</span></div>
-          </div>
-        </div>
-      </section>
-      <div class="ticker" aria-label="Our bakery promise">
-        <div class="ticker-track"><span>Small batch, always</span><span class="ticker-dot">✳</span><span>Real butter, real berries</span><span class="ticker-dot">✳</span><span>Made fresh every day</span><span class="ticker-dot">✳</span><span>Small batch, always</span></div>
-      </div>
-      <section class="section" id="treats">
-        <div class="section-heading">
-          <div><div class="eyebrow">The good stuff</div><h2>Today's little<br />pick-me-ups.</h2></div>
-          <p>Made in small batches with the good ingredients. Pick up a favorite—or let us help you find one.</p>
-        </div>
-        <div class="filter-row" aria-label="Filter treats">
-          <button class="filter-chip active" data-filter="all" aria-pressed="true">All treats</button>
-          <button class="filter-chip" data-filter="cake" aria-pressed="false">Cakes</button>
-          <button class="filter-chip" data-filter="pastry" aria-pressed="false">Pastries</button>
-          <button class="filter-chip" data-filter="little" aria-pressed="false">Little joys</button>
-        </div>
-        <div class="product-grid" id="product-grid" aria-live="polite"></div>
-        <div class="order-note">A little heads-up: custom cakes need 48 hours' notice. Call us and we'll save you a slice.</div>
-      </section>
-      <section class="story" id="about">
-        <div class="story-inner">
-          <div class="story-image"><img src="./images/story.jpg" alt="A baker dusting fresh dough with flour in the Sweet Crumbs kitchen" /><div class="story-stamp">Baked with<br />a little love<small>every day</small></div></div>
-          <div class="about-copy">
-            <div class="eyebrow">A kitchen with a story</div>
-            <h2>Small oven.<br />Big-hearted bakes.</h2>
-            <p>Sweet Crumbs began with one tiny oven, a well-loved recipe book, and a slightly unreasonable number of vanilla beans. Today, we're still a small neighborhood bakery—and still believe the best things are made slowly, by hand, and shared.</p>
-            <p>We bake with seasonal fruit, good butter, and ingredients we can pronounce. No shortcuts, just the sort of treats that make an ordinary Tuesday feel a little more special.</p>
-            <div class="values"><div class="value"><strong>Every day</strong><span>Fresh batches</span></div><div class="value"><strong>By hand</strong><span>Always small-batch</span></div><div class="value"><strong>With care</strong><span>Local ingredients</span></div></div>
-          </div>
-        </div>
-      </section>
-      <section class="promise"><p>A note from our kitchen</p><h2>“The secret ingredient is always <em>sharing.</em>”</h2></section>
-      <section class="contact" id="contact">
-        <div class="contact-grid">
-          <div>
-            <div class="eyebrow">Come say hello</div>
-            <h2>Your neighborhood<br />sweet spot.</h2>
-            <p class="contact-lead">We're a fictional student-project bakery, but we can still help you plan the sweetest imaginary visit.</p>
-            <div class="contact-list">
-              <div class="contact-item"><span class="contact-icon" aria-hidden="true">⌖</span><div><strong>Find our little shop</strong><span>14 Rose Lane, College Gardens<br />Pune, Maharashtra 411007 · Demo address</span></div></div>
-              <div class="contact-item"><span class="contact-icon" aria-hidden="true">◷</span><div><strong>Our opening hours</strong><span>Tue–Sun, 8:00 am–6:00 pm<br />Closed Mondays (even bakers need a breather)</span></div></div>
-              <div class="contact-item"><span class="contact-icon" aria-hidden="true">✉</span><div><strong>Say hello</strong><span><a href="mailto:hello@sweetcrumbs.example">hello@sweetcrumbs.example</a><br />+91 20 5550 0184 · Fictional demo number</span></div></div>
-            </div>
-          </div>
-          <div class="contact-card">
-            <div class="eyebrow">For the big days</div><h3>A cake with your name on it?</h3>
-            <p>Birthday candles, just-because slices, or a whole table of tiny treats. Give us 48 hours and we'll dream up something lovely with you.</p>
-            <p>For this demo, messages don't go to a real bakery. Use the sample email above to explore the contact link.</p>
-            <a class="button" href="mailto:hello@sweetcrumbs.example?subject=Tell%20me%20about%20a%20cake">Ask about a custom cake <span aria-hidden="true">↗</span></a>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="footer"><div class="footer-inner"><a class="brand" href="#home"><span class="brand-mark">s</span><span class="brand-name">Sweet Crumbs<small>Bakery &amp; little joys</small></span></a><span>Made with care, butter, and a little imagination.</span><span>© <span id="year"></span> Sweet Crumbs · Student project demo</span></div></footer>
-    <dialog class="cart-dialog" id="cart-dialog" aria-labelledby="cart-title">
-      <div class="cart-head"><h2 id="cart-title">Your little bag</h2><button class="close-cart" id="close-cart" aria-label="Close bag">×</button></div>
-      <div class="cart-body" id="cart-body"></div>
-      <div class="cart-footer"><div class="cart-total"><span>Little bag total</span><span id="cart-total">₹0</span></div><button class="button" id="checkout">Ask us to save these</button></div>
-    </dialog>
-    <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sweet Crumbs - Bakery & Little Joys</title>
+<style>
+body{font-family: system-ui, sans-serif; margin:0; background:#fff9f5; color:#3d2b1f}
+header{padding:20px; display:flex; justify-content:space-between; background:white; box-shadow:0 2px 10px rgba(0,0,0,0.05)}
+.logo{font-weight:800}
+.hero{padding:40px 20px; text-align:center; background:#fff0e6}
+.hero h1{font-size:32px; margin:0}
+.btn{background:#ff6b35; color:white; padding:12px 24px; border-radius:30px; text-decoration:none; display:inline-block; margin-top:15px; font-weight:600}
+.grid{display:grid; grid-template-columns:1fr 1fr; gap:15px; padding:20px}
+.card{background:white; border-radius:15px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.05)}
+.card img{width:100%; height:140px; object-fit:cover}
+.card .info{padding:10px}
+.card h3{margin:0; font-size:16px}
+.price{color:#ff6b35; font-weight:700}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">Sweet Crumbs<br><small>BAKERY & LITTLE JOYS</small></div>
+<div>Bag 0</div>
+</header>
+
+<div class="hero">
+<h1>Where every crumb tells a story</h1>
+<p>Freshly baked everyday with love in Palladam</p>
+<a class="btn" href="#menu">See what's baking ↓</a>
+</div>
+
+<div class="grid" id="menu">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500" alt="Cake">
+<div class="info"><h3>Chocolate Truffle</h3><p>Rich chocolate</p><div class="price">Rs. 650</div></div>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=500" alt="Cake">
+<div class="info"><h3>Strawberry Dream</h3><p>Fresh strawberry</p><div class="price">Rs. 700</div></div>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=500" alt="Cake">
+<div class="info"><h3>Red Velvet Joy</h3><p>Classic red velvet</p><div class="price">Rs. 750</div></div>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1488477181946-64290103bbd6?w=500" alt="Cake">
+<div class="info"><h3>Little Cupcake</h3><p>Box of 6</p><div class="price">Rs. 350</div></div>
+</div>
+</div>
+
+<div style="text-align:center; padding:30px; background:white">
+<p>💡 Custom cakes need 48 hours notice</p>
+<a class="btn" href="https://wa.me/918072823987?text=Hi%20Sweet%20Crumbs!%20Order%20pannanum">Order on WhatsApp</a>
+</div>
+</body>
 </html>
