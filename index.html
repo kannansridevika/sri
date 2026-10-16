@@ -3,83 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>K. Sakthivel Shops - Bakery & More</title>
-<style>
-body{font-family: system-ui, sans-serif; margin:0; background:#fff9f5; color:#3d2b1f}
-header{padding:15px 20px; display:flex; justify-content:space-between; align-items:center; background:white; box-shadow:0 2px 10px rgba(0,0,0,0.05); position:sticky; top:0; z-index:10}
-.logo{font-weight:800; font-size:18px; line-height:1.2}
-.hero{padding:50px 20px; text-align:center; background:linear-gradient(#fff0e6, #fff9f5)}
-.hero h1{font-size:38px; margin:10px 0}
-.btn{background:#ff6b35; color:white; padding:12px 28px; border-radius:30px; text-decoration:none; display:inline-block; font-weight:600; border:none; cursor:pointer; margin:5px}
-.grid{display:grid; grid-template-columns:1fr 1fr; gap:15px; padding:20px}
-.card{background:white; border-radius:15px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.06); cursor:pointer}
-.card img{width:100%; height:150px; object-fit:cover}
-.card .info{padding:12px}
-.card h3{margin:0; font-size:16px}
-.price{color:#ff6b35; font-weight:700; margin-top:5px}
-.section{padding:30px 20px; background:white; margin:15px; border-radius:15px; text-align:center}
-#bagCount{background:#ff6b35; color:white; padding:3px 10px; border-radius:12px; font-weight:bold}
-</style>
+<title>SriCraftsEcoShop - Handmade with Love</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Noto+Sans+Tamil:wght@400;600&display=swap" rel="stylesheet">
+<style>body{font-family:'Poppins','Noto Sans Tamil',sans-serif}</style>
 </head>
-<body>
-
-<header>
-<div class="logo">K. SAKTHIVEL SHOPS<br><small>Bakery & Little Joys</small></div>
-<div>Bag <span id="bagCount">0</span></div>
-</header>
-
-<div class="hero">
-<h1>K. SAKTHIVEL SHOPS</h1>
-<p style="font-size:22px; font-weight:600">Where every crumb tells a story</p>
-<p>Freshly baked everyday with love in Palladam</p>
-<p><b>Owner: K. Sakthivel</b> | Palladam, Since 2024</p>
-<a class="btn" href="#menu">See What's Baking</a>
-</div>
-
-<div class="grid" id="menu">
-<div class="card" onclick="addToBag('Chocolate Truffle - Rs.650')">
-<img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500">
-<div class="info"><h3>Chocolate Truffle</h3><div class="price">Rs. 650</div><small>Click to add</small></div>
-</div>
-<div class="card" onclick="addToBag('Strawberry Dream - Rs.700')">
-<img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=500">
-<div class="info"><h3>Strawberry Dream</h3><div class="price">Rs. 700</div><small>Click to add</small></div>
-</div>
-<div class="card" onclick="addToBag('Red Velvet Joy - Rs.750')">
-<img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=500">
-<div class="info"><h3>Red Velvet Joy</h3><div class="price">Rs. 750</div><small>Click to add</small></div>
-</div>
-<div class="card" onclick="addToBag('Little Cupcake Box - Rs.350')">
-<img src="https://images.unsplash.com/photo-1488477181946-64290103bbd6?w=500">
-<div class="info"><h3>Little Cupcake Box (6pcs)</h3><div class="price">Rs. 350</div><small>Click to add</small></div>
-</div>
-</div>
-
-<div class="section">
-<h2>🛒 Your Bag</h2>
-<p id="cartMsg">Bag is empty. Click cakes above!</p>
-<a class="btn" id="waBtn" href="https://wa.me/918072823987?text=Hi%20K.%20Sakthivel%20Shops!">Order on WhatsApp</a>
-</div>
-
-<div class="section">
-<h2>📍 K. Sakthivel Shops</h2>
-<p><b>Owner: K. Sakthivel</b><br>Palladam, Tiruppur District<br>Tamil Nadu - 641664<br>Contact: 8072823987<br>Delivery: Palladam & Tiruppur</p>
-</div>
-
-<div class="section" style="background:#3d2b1f; color:white">
-<h2>K. SAKTHIVEL SHOPS</h2>
-<p>College Project 2026<br>Project by: Sridevika<br>For K. Sakthivel Shops, Palladam</p>
-</div>
-
-<script>
-let count=0, items=[];
-function addToBag(name){
-count++; items.push(name);
-document.getElementById('bagCount').innerText=count;
-document.getElementById('cartMsg').innerText="Added: "+items.join(', ');
-let msg="Hi K. Sakthivel Shops! I want to order:\n"+items.join('\n')+"\nTotal: "+count+" items";
-document.getElementById('waBtn').href="https://wa.me/918072823987?text="+encodeURIComponent(msg);
-}
-</script>
-</body>
-</html>
+<body class="bg-[#fef9f3]">
+<header class="bg-white shadow-sm sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+    <div class="flex items-center gap-2"><span class="text-2xl">🌿</span><h1 class="text-xl font-bold text-[#5a3d2b]">SriCrafts<span class="text-[#e67e22]">EcoShop</span></h1></div>
+    <div class="flex items-center gap-3">
+      <div class="flex bg-[#f5ebe0] rounded-full p-1"><button id="btn-en" onclick="
