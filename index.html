@@ -3,76 +3,95 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sweet Crumbs - Bakery & Little Joys</title>
+<title>Sweet Crumbs - Sakthivel Special</title>
 <style>
 body{font-family: system-ui, sans-serif; margin:0; background:#fff9f5; color:#3d2b1f}
-header{padding:15px 20px; display:flex; justify-content:space-between; align-items:center; background:white; box-shadow:0 2px 10px rgba(0,0,0,0.05); position:sticky; top:0; z-index:10}
-.logo{font-weight:800; line-height:1.1}
-.hero{padding:40px 20px; text-align:center; background:#fff0e6}
-.hero h1{font-size:32px; margin:0}
-.btn{background:#ff6b35; color:white; padding:12px 24px; border-radius:30px; text-decoration:none; display:inline-block; margin-top:10px; font-weight:600; border:none; cursor:pointer}
+header{padding:15px 20px; display:flex; justify-content:space-between; align-items:center; background:white; box-shadow:0 2px 10px rgba(0,0,0,0.05); position:sticky; top:0; z-index:20}
+.logo{font-weight:800}
+.hero{padding:50px 20px; text-align:center; background:linear-gradient(#fff0e6, #fff9f5)}
+.hero h1{font-size:36px; margin:10px 0}
+.hero img{width:120px; height:120px; border-radius:50%; object-fit:cover; border:4px solid #ff6b35}
+.btn{background:#ff6b35; color:white; padding:12px 28px; border-radius:30px; text-decoration:none; display:inline-block; font-weight:600; border:none; cursor:pointer; margin:5px}
 .grid{display:grid; grid-template-columns:1fr 1fr; gap:15px; padding:20px}
-.card{background:white; border-radius:15px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.05); cursor:pointer}
-.card img{width:100%; height:140px; object-fit:cover}
+.card{background:white; border-radius:15px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.06); cursor:pointer; transition:0.2s}
+.card:active{transform:scale(0.97)}
+.card img{width:100%; height:150px; object-fit:cover}
 .card .info{padding:12px}
 .card h3{margin:0; font-size:16px}
-.price{color:#ff6b35; font-weight:700; margin-top:4px}
-#bagCount{background:#ff6b35; color:white; padding:2px 8px; border-radius:10px; font-size:14px}
+.price{color:#ff6b35; font-weight:700; margin-top:5px}
+.section{padding:30px 20px; background:white; margin:15px; border-radius:15px; text-align:center}
+#bagCount{background:#ff6b35; color:white; padding:3px 10px; border-radius:12px; font-weight:bold}
 </style>
 </head>
 <body>
+
 <header>
-<div class="logo">Sweet Crumbs<br><small>BAKERY & LITTLE JOYS</small></div>
+<div class="logo">Sweet Crumbs ❤️</div>
 <div>Bag <span id="bagCount">0</span></div>
 </header>
 
 <div class="hero">
+<img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=300" alt="Sakthivel">
+<h1>For My Sakthivel ❤️</h1>
 <h1>Where every crumb tells a story</h1>
-<p>Freshly baked everyday with love</p>
-<p>Made with love for Sakthivel ❤️</p>
-<a class="btn" href="#menu">See what's baking ↓</a>
+<p>Freshly baked everyday with love in <b>Palladam</b></p>
+<p><small>Made with love by his favorite person</small></p>
+<a class="btn" href="#menu">See Menu</a>
 </div>
 
 <div class="grid" id="menu">
-<div class="card" onclick="addToBag('Chocolate Truffle')">
+<div class="card" onclick="addToBag('Chocolate Truffle - Rs.650')">
 <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500">
-<div class="info"><h3>Chocolate Truffle</h3><div class="price">Rs. 650 - Click to Add</div></div>
+<div class="info"><h3>Chocolate Truffle</h3><div class="price">Rs. 650</div><small>Click to add to bag</small></div>
 </div>
-<div class="card" onclick="addToBag('Strawberry Dream')">
+<div class="card" onclick="addToBag('Strawberry Dream - Rs.700')">
 <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=500">
-<div class="info"><h3>Strawberry Dream</h3><div class="price">Rs. 700 - Click to Add</div></div>
+<div class="info"><h3>Strawberry Dream</h3><div class="price">Rs. 700</div><small>Click to add</small></div>
 </div>
-<div class="card" onclick="addToBag('Red Velvet Joy')">
+<div class="card" onclick="addToBag('Red Velvet Joy - Rs.750')">
 <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=500">
-<div class="info"><h3>Red Velvet Joy</h3><div class="price">Rs. 750 - Click to Add</div></div>
+<div class="info"><h3>Red Velvet Joy</h3><div class="price">Rs. 750</div><small>Click to add</small></div>
 </div>
-<div class="card" onclick="addToBag('Little Cupcake')">
+<div class="card" onclick="addToBag('Little Cupcake Box - Rs.350')">
 <img src="https://images.unsplash.com/photo-1488477181946-64290103bbd6?w=500">
-<div class="info"><h3>Little Cupcake Box</h3><div class="price">Rs. 350 - Click to Add</div></div>
+<div class="info"><h3>Little Cupcake Box (6pcs)</h3><div class="price">Rs. 350</div><small>Click to add</small></div>
 </div>
 </div>
 
-<div style="text-align:center; padding:30px; background:white">
-<p id="cartMsg">Bag is empty. Click cakes to add!</p>
-<p>💡 Custom cakes need 48 hours notice</p>
-<a class="btn" id="waBtn" href="https://wa.me/918072823987?text=Hi%20Sweet%20Crumbs!%20Order%20pannanum">Order on WhatsApp</a>
+<div class="section">
+<h2>🛒 Your Bag</h2>
+<p id="cartMsg">Bag is empty. Click cakes above!</p>
+<a class="btn" id="waBtn" href="https://wa.me/918072823987?text=Hi%20Sweet%20Crumbs!%20Order%20pannanum">Order on WhatsApp - 8072823987</a>
+</div>
+
+<div class="section">
+<h2>📍 Visit Us / Delivery</h2>
+<p><b>Sweet Crumbs Bakery</b><br>
+Palladam, Tiruppur District<br>
+Tamil Nadu - 641664</p>
+<p>🚚 Delivery available in Palladam & Tiruppur<br>
+⏰ Fresh baking: 9AM - 8PM<br>
+💡 Custom cakes need 48 hours notice</p>
+<a class="btn" href="https://wa.me/918072823987">Chat on WhatsApp</a>
+</div>
+
+<div class="section" style="background:#3d2b1f; color:white">
+<h2>Made with ❤️ for Sakthivel</h2>
+<p>Every cake baked with love, every crumb with a story</p>
 </div>
 
 <script>
-let count = 0;
-let items = [];
+let count=0, items=[];
 function addToBag(name){
-  count++;
-  items.push(name);
-  document.getElementById('bagCount').innerText = count;
-  document.getElementById('cartMsg').innerText = "Added: " + items.join(', ');
-  let msg = "Hi Sweet Crumbs! I want to order: " + items.join(', ') + " (Total items: " + count + ")";
-  document.getElementById('waBtn').href = "https://wa.me/918072823987?text=" + encodeURIComponent(msg);
-  let bag = document.getElementById('bagCount');
-  bag.style.transform = "scale(1.5)";
-  setTimeout(()=> bag.style.transform = "scale(1)", 200);
+count++; items.push(name);
+document.getElementById('bagCount').innerText=count;
+document.getElementById('cartMsg').innerText="Added: "+items.join(', ');
+let msg="Hi! This is from Sweet Crumbs Website ❤️\n\nI want to order:\n"+items.join('\n')+"\n\nTotal items: "+count+"\n\nFrom Palladam website";
+document.getElementById('waBtn').href="https://wa.me/918072823987?text="+encodeURIComponent(msg);
+let bag=document.getElementById('bagCount');
+bag.style.transform="scale(1.6)";
+setTimeout(()=>bag.style.transform="scale(1)",200);
 }
 </script>
-
 </body>
 </html>
